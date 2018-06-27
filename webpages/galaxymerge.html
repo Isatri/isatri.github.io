@@ -1,16 +1,7 @@
 <!DOCTYPE HTML>
-<!--
-	Story by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
 <html>
 	<head>
-		<!--
-
-		Title of the website.
-
-		-->
 		<title>Isaiah Tristan</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -18,12 +9,11 @@
 	</head>
 	<body>
 
-		<!-- Wrapper -->
 			<div id="wrapper" class="divided">
 
-			<!-- Heading -->
 				<section class="wrapper style1 align-left">
 					<div class="inner content">
+
 
 						<span class="image fit"><img src="../images/galpic.jpg" alt="" /></span>
 						<header>
@@ -31,39 +21,75 @@
 							<p>Modeling galaxy collisions with Python</p>
 						</header>
 
-						<p>[PLACEHOLDER]</p>
 
 						<p>
-
-							<video width=895 controls loop autoplay>
-  								<source src="../images/movie.mp4" type="video/mp4">
-  							</video>
-
-  							<br />
-
-							Typically, modeling galaxy collisions is done on supercomputers with plenty of running time. I had neither a supercomputer nor plenty of time to finish this project, so a few simplifications had to be made.
-
-							<ul>
-								<li>[PLACEHOLDER]</li>
-							</ul>
-							
+							In only four billion years, our galaxy, The Milky Way, will collide and combine with its nearest neighbor, the Andromeda Galaxy. While we will be long gone and the Sun of its last leg, we still have reason to wonder how exactly galaxies behave during collisions and what consequences follow.
 						</p>
 
-						<p>
 
-							<video width=895 controls loop autoplay>
+						<p>
+							<video width=100% controls loop autoplay=true>
+  								<source src="../images/movie.mp4" type="video/mp4">
+  							</video>
+  						</p>	
+
+
+  						<p>
+							The most accurate and complicated galaxy merger models are computed using supercomputers with plenty of running time. I had neither a supercomupter nor plenty of time to complete this project, so a few <strong>simplifications</strong> had to be made:
+
+							<ul>
+								<li>No star-to-star interactions</li>
+								<li>No direct collisions</li>
+								<li>The central super-massive black hole has approximately the same mass as the Milky Way's</li>
+								<li>No gas clouds or star formation</li>
+								<li>No halo or bulge in the galaxy</li>
+							</ul>
+						</p>
+
+
+						<p>
+							<video width=100% controls loop autoplay>
   								<source src="../images/movie2.mp4" type="video/mp4">
   							</video>
 
   							<br />
+						</p>
 
+
+						<p>
+							Using a conservation-of-energy analysis, I found that the majority of the simulation conserved energy, with there being small errors when the two black holes interact too closely. This could be solved by using a smaller timestep when computing collisions, but would require more time to run.
+							<br /> <br />
+							Despite all the simplifications made and the small blip in energy conservation, the simulation appears reasonable, as some of the structures resulting from random collisions are seen in what we believe to be galaxy collisions in nature. 
+						</p>
+
+						<div class="items style1 medium onscroll-fade-in">
+							<section>
+								<span class="image fit"><img src="../images/Cartwheel_img.png" alt="" width=500 height=125 /></span>
+								<h3>Cartwheel Galaxy</h3>
+								<p>A face on collision of two galaxies where one is significantly larger than the other produces a shape similar to the Cartwheel Galaxy.</p>
+							</section>
+							<section>
+								<span class="image fit"><img src="../images/NGC_img.png" alt="" width=500 height=125 /></span>
+								<h3>NGC 7714</h3>
+								<p>A slightly offset side-on collision where one galaxy is much larger than the other produces a shape similar to NGC 7714. This can be seen in the first animation above.</p>
+							</section>
+							<section>
+								<span class="image fit"><img src="../images/VV_img.png" alt="" width=500 height=125 /></span>
+								<h3>VV 705</h3>
+								<p>A slightly offset side-on collision where the galaxies are approximately the same size produces a shape similar to VV705. This can be seen in the second animation.</p>
+							</section>
+						</div>
+
+						<p>
+							<strong>External Photo Credits:</strong> <br />
+							All pictures were found on the <a href="https://www.spacetelescope.org/images/">Hubble Telescope</a> website.
 						</p>
 
 						<p><a href="../index.html">Back to the main page...</a></p>
 
+
 					</div>
 				</section>
-
 
 	</body>
 </html>
