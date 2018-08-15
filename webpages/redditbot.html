@@ -1,0 +1,207 @@
+<!--Style is heavily based off of the CodePen Technical Documentation Page. I find it to be very simplistic, no-nonsense, and easy to follow and have used many of the ideas there.-->
+<style>
+  html, body{
+    color: #4d4e53;
+    background-color: #ffffff;
+    font-family: 'Open Sans',Calibri;
+    line-height: 1.5;
+  }
+  header{
+    color:black;
+    margin:10px;
+    text-align: center;
+    font-size:1.8em;
+  }
+  section article{
+    color: #4d4e53;
+    margin:15px;
+    font-size:0.95em;
+  }
+  code{
+    display: block;
+    line-height: 2;
+    background-color: #f7f7f7;
+    padding:15px;
+    margin:10px;
+    border-radius:5px;
+    white-space: pre;
+  }
+  #navbar{
+    position:fixed;
+    background-color: lightgray;
+    top:10px;
+    left:10px;
+    bottom: 10px;
+    width:290px;
+    border-radius: 5%
+  }
+  #navbar ol {
+      height: 60%;
+      list-style: none;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+  #main-doc header{
+    text-align:left;
+    margin:0px;
+  }
+  #navbar a{
+    color: black;
+    text-decoration:none;
+  } 
+  #main-doc{
+    position: absolute;
+    margin-left:310px;
+    padding:20px;
+    margin-bottom:50px;
+  }
+  @media only screen and (max-width: 815px) {
+    #navbar{
+      background-color: lightgray;
+      position: absolute;
+      top:0;
+      left:0;
+      width: 100%;
+      max-height:320px;
+    }
+    #navbar ol {
+    height: 100%;
+    list-style: none;
+    overflow-x: hidden;
+    overflow-y: auto;
+    }
+    #main-doc{
+      position: relative;
+      margin-left:0px;
+      margin-top:320px;
+    }
+    @media only screen and (max-height: 315px) {
+    #navbar ol {
+    height: 60%;
+    }
+    }
+  }
+</style>
+
+<html>
+  <body>
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header id="">Introduction</header>
+        <article>
+          <p>This document goes through the process of creating a Python bot that gets posts from a subreddit and replies to them if a certain condition is met.</p>
+        </article>
+      </section>
+
+      <section class="main-section" id="Things_You_Need_to_Know">
+        <header id="">Things You Need to Know</header>
+        <article>
+          <p>Just a itsy bitsy teenie weenie [yellow polka-dot bikini] bit of Python. If you don't know any, go through a quick training program like <a href="https://www.codecademy.com/learn/learn-python">Codecademy</a> to get some syntax and ideas down, and you'll be good to go!</p>
+        </article>
+      </section>
+
+      <section class="main-section" id="Getting_Set_Up">
+        <header id="">Getting Set Up</header>
+        <article>
+          <p>The first thing you'll want to do is install some sort of Python IDE (or whatever you want to use to work with Python), VirutalBox, and Vagrant. There's plenty of guides and documentation for each, so we'll skip that here.</p>
+          <ul>
+            <a href="https://www.anaconda.com/download/#macos"><li>Anaconda</li></a>
+            <a href="https://www.virtualbox.org/"><li>VirtualBox</li></a>
+            <a href="https://www.vagrantup.com/"><li>Vagrant</li></a>
+            <a href="https://www.vagrantup.com/intro/getting-started/index.html"><li>Vagrant: Getting Started</li></a>
+          </ul>
+        </article>
+      </section>
+
+      <section class="main-section" id="Creating_A_Linux_Environment">
+        <header id="">Creating A Linux Environment</header>
+        <article>
+          <p>The first thing we want to do is use Vagrant to create a Virtual Environment that is using Linux in order to later automate our Python Script. We do this by first making a folder where we will house our files, then initializing a virtual environment. Open your terminal, and do the following:</p>
+          <code>$ mkdir bot
+$ cd bot
+$ vagrant init bento/ubuntu-16.04
+$ vagrant up
+$ vagrant ssh</code>
+          <p>The box we are using, "bento/ubuntu-16.04" should have everything you need, except for maybe PRAW. If so, enter the following:</p>
+          <code>$ sudo pip3 install praw</code>
+          <p>Keep in mind that this creates files and is running on your computer. To stop running or remove the environment, you can exit SSH using Ctrl-D, then "halt" or "destroy" it using the following commands in the folder with your Vagrantfile:</p>
+          <code>$ vagrant halt
+$ vagrant destroy</code>
+        </article>
+      </section>
+
+      <section class="main-section" id="Reddit_Account">
+        <header id="">Reddit Account</header>
+        <article>
+          <p>Now, you'll need to make a Reddit account if you haven't already. Then, you can go to <a href="https://www.reddit.com/prefs/apps">https://www.reddit.com/prefs/apps</a> and click the "create app" button at the bottom of the page. Give your app whatever name and description you'd like, select "script", and set "redirect url" to "http://127.0.0.1". Now that you have a bot, take note of the codes right under "personal use script" and next to "secret".</p>
+          <p>Next, you'll want to create a text file called "praw.ini" with the following contents:</p>
+          <code>check_for_updates=True
+comment_kind=t1
+message_kind=t4
+redditor_kind=t2
+submission_kind=t3
+subreddit_kind=t5
+
+oauth_url=https://oauth.reddit.com
+reddit_url=https://www.reddit.com
+short_url=https://redd.it
+
+[bot1]
+client_id=
+client_secret=
+password=
+username=
+user_agent=</code>
+           <p>Fill out the bot by putting the top code of your Reddit app in "client_id", secret in "client_secret", your Reddit password and username, and whatever "user_agent" name you want. Place praw.ini in the folder with your Vagrantfile.</p>
+        </article>
+      </section>
+
+      <section class="main-section" id="Python_Script">
+        <header id="">Python Script</header>
+        <article>
+
+        </article>
+      </section>
+
+      <section class="main-section" id="Crontab">
+        <header id="">Crontab</header>
+        <article>
+          <p>While SSH'd into your Linux environment you can use this command to open up a crontab file used to automate a task:</p>
+          <code>$vagrant crontab -e</code>
+          <p>The help text that comes up explains crontab pretty well, and if that doesn't help, you can look at some examples in the link in the References section. Either way, you can add this statement to the end of the crontab file to run your script every minute:</p>
+          <code>* * * * * cd /vagrant/; python3 botscript.py</code>
+          <p>Finally, press Ctrl-O and Enter to save, then Ctrl-X to exit. Your script is now automatically running!</p>
+        </article>
+      </section>
+
+      <section class="main-section" id="References">
+        <header id="">References</header>
+        <article>
+          <p>The idea and many of the starting ideas to the methods came from <a href="http://pythonforengineers.com/build-a-reddit-bot-part-1/">this guide</a> by Shantnu Tiwari. I created my guide primarily as an HTML/CSS exercise, but also because I had trouble following along and getting most parts working using his methods, despite the good ideas and explanations.</p>
+          <p>Other references and API documentation are below:</p>
+          <ul>
+            <li><a href="https://praw.readthedocs.io/en/latest/">PRAW Documentation</a></li>
+            <li><a href="https://www.thegeekstuff.com/2009/06/15-practical-crontab-examples/">Crontab Examples</a></li>
+          </ul>
+        </article>
+      </section>
+
+    </main>
+
+    <nav id="navbar">
+      <header>Build-a-Bot (Reddit)</header>
+      <ol>
+        <a href=#Introduction class="nav-link"><li>Introduction</li></a>
+        <a href=#Things_You_Need_to_Know class="nav-link"><li>Things You Need to Know</li></a>
+        <a href=#Getting_Set_Up class="nav-link"><li>Getting Set Up</li></a>
+        <a href=#Creating_A_Linux_Environment class="nav-link"><li>Creating A Linux Environment</li></a>
+        <a href=#Reddit_Account class="nav-link"><li>Reddit Account</li></a>
+        <a href=#Python_Script class="nav-link"><li>Python Script</li></a>
+        <a href=#Crontab class="nav-link"><li>Crontab</li></a>
+        <a href=#References class="nav-link"><li>References</li></a>
+        <li><br /></li>
+        <a href="../"><li>Return to front page...</li></a>
+      </ol>
+    </nav>
+  </body>
+</html>
