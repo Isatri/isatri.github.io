@@ -23,23 +23,27 @@
     background-color: #f7f7f7;
     padding:15px;
     margin:10px;
-    border-radius:5px;
+    border-radius:10px;
     white-space: pre;
   }
   #navbar{
     position:fixed;
+    display: block;
     background-color: lightgray;
-    top:10px;
-    left:10px;
-    bottom: 10px;
     width:290px;
-    border-radius: 5%
+    top:10px;
+    bottom:10px;
+    left: 10px;
+    border-radius: 5px;
   }
   #navbar ol {
-      height: 60%;
-      list-style: none;
-      overflow-x: hidden;
-      overflow-y: auto;
+    display: block;
+    position: fixed;
+    top:60px;
+    bottom:10px;
+    left: 10px;
+    list-style: none;
+    overflow-y: auto;
     }
   #main-doc header{
     text-align:left;
@@ -55,29 +59,31 @@
     padding:20px;
     margin-bottom:50px;
   }
-  @media only screen and (max-width: 815px) {
+  @media only screen and (max-width: 500px) {
     #navbar{
       background-color: lightgray;
       position: absolute;
       top:0;
       left:0;
-      width: 100%;
+      right:0px;
+      margin: 10px;
+      width: auto;
       max-height:320px;
     }
     #navbar ol {
-    height: 100%;
+    display: block;
+    position: absolute;
+    top:60px;
+    bottom:10px;
+    left: 10px;
+    width: 80%;
     list-style: none;
-    overflow-x: hidden;
     overflow-y: auto;
     }
     #main-doc{
       position: relative;
       margin-left:0px;
       margin-top:320px;
-    }
-    @media only screen and (max-height: 315px) {
-    #navbar ol {
-    height: 60%;
     }
     }
   }
@@ -89,7 +95,7 @@
       <section class="main-section" id="Introduction">
         <header id="">Introduction</header>
         <article>
-          <p>This document goes through the process of creating a Python bot that gets articles of a topic you define and uploads them to a subreddit. (Use your own though. Please.)</p>
+          <p>This document goes through the process of creating a Python bot that gets posts from a subreddit and replies to them if a certain condition is met.</p>
         </article>
       </section>
 
@@ -159,7 +165,7 @@ user_agent=</code>
       <section class="main-section" id="Python_Script">
         <header id="">Python Script</header>
         <article>
-          <p>Guide coming soon...</p>
+          <p>Guide Coming Soon...</p>
         </article>
       </section>
 
