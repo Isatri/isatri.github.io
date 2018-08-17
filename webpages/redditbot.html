@@ -59,7 +59,34 @@
     padding:20px;
     margin-bottom:50px;
   }
-  @media only screen and (max-width: 500px) {
+  @media (max-width: 500px) {
+    #navbar{
+      background-color: lightgray;
+      position: absolute;
+      top:0;
+      left:0;
+      right:0px;
+      margin: 10px;
+      width: auto;
+      max-height:320px;
+    }
+    #navbar ol {
+    display: block;
+    position: absolute;
+    top:60px;
+    bottom:10px;
+    left: 10px;
+    width: 80%;
+    list-style: none;
+    overflow-y: auto;
+    }
+    #main-doc{
+      position: relative;
+      margin-left:0px;
+      margin-top:320px;
+    }
+    }
+  @media only screen and (max-width: 300px) {
     #navbar{
       background-color: lightgray;
       position: absolute;
@@ -165,7 +192,7 @@ user_agent=</code>
       <section class="main-section" id="Python_Script">
         <header id="">Python Script</header>
         <article>
-          <p>Guide Coming Soon...</p>
+
         </article>
       </section>
 
