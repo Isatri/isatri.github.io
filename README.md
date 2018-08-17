@@ -1,5 +1,5 @@
 # isatri.github.io
 
-Hello! Welcome to the Github page of my website! I don't really know what you're doing here, but I guess that's that. I got this from a recommendation from a friend on HTML5UP, so if you're looking for help for your website and didn't contact me directly, that would be a good resource to use. 
+Hello! Welcome to the Github page of my website! I don't really know what you're doing here, but if you were looking for the website in all it's HTML glory, go to https://www.itristan.space. Most of the designs are from a HTML5Up design, but certain pages are made by hand (e.g. "Planet Exoplanet" Reddit Bot Documentation) for the fun of it.
 
 Other than that, enjoy your stay and your day!
