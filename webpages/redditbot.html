@@ -1,7 +1,7 @@
 <!--Style is heavily based off of the CodePen Technical Documentation Page. I find it to be very simplistic, no-nonsense, and easy to follow and have used many of the ideas there.-->
 <style>
   html, body{
-    color: #4d4e53;
+    color: #36454f;
     background-color: #ffffff;
     font-family: 'Open Sans',Calibri;
     line-height: 1.5;
@@ -13,23 +13,24 @@
     font-size:1.8em;
   }
   section article{
-    color: #4d4e53;
+    color: #36454f;
     margin:15px;
     font-size:0.95em;
   }
   code{
     display: block;
     line-height: 2;
-    background-color: #f7f7f7;
+    background-color: lightgray;
     padding:15px;
     margin:10px;
-    border-radius:10px;
+    border-radius:3px;
     white-space: pre;
+    color: black;
   }
   #navbar{
     position:fixed;
     display: block;
-    background-color: lightgray;
+    background-color: rgb(158, 185, 212);
     width:290px;
     top:10px;
     bottom:10px;
@@ -48,6 +49,9 @@
   #main-doc header{
     text-align:left;
     margin:0px;
+    background-color: lightblue;
+    border-radius: 10px;
+    padding-left: 5px;
   }
   #navbar a{
     color: black;
@@ -59,7 +63,7 @@
     padding:20px;
     margin-bottom:50px;
   }
-  @media only screen and (max-width: 700px) {
+  @media (max-width: 500px) {
     #navbar{
       background-color: lightgray;
       position: absolute;
@@ -68,11 +72,10 @@
       right:0px;
       margin: 10px;
       width: auto;
-      max-height:300px;
-        z-index:1;
+      max-height:320px;
     }
     #navbar ol {
-    display: inline-block;
+    display: block;
     position: absolute;
     top:60px;
     bottom:10px;
@@ -84,14 +87,40 @@
     #main-doc{
       position: relative;
       margin-left:0px;
-      margin-top:300px;
+      margin-top:320px;
+    }
+    }
+  @media only screen and (max-width: 300px) {
+    #navbar{
+      background-color: lightgray;
+      position: absolute;
+      top:0;
+      left:0;
+      right:0px;
+      margin: 10px;
+      width: auto;
+      max-height:320px;
+    }
+    #navbar ol {
+    display: block;
+    position: absolute;
+    top:60px;
+    bottom:10px;
+    left: 10px;
+    width: 80%;
+    list-style: none;
+    overflow-y: auto;
+    }
+    #main-doc{
+      position: relative;
+      margin-left:0px;
+      margin-top:320px;
     }
     }
   }
 </style>
 
 <html>
-<meta name="viewport" content="width=device-width">
   <body>
     <main id="main-doc">
       <section class="main-section" id="Introduction">
@@ -167,7 +196,7 @@ user_agent=</code>
       <section class="main-section" id="Python_Script">
         <header id="">Python Script</header>
         <article>
-
+          <p>Coming soon.</p>
         </article>
       </section>
 
@@ -211,6 +240,5 @@ user_agent=</code>
         <a href="../"><li>Return to front page...</li></a>
       </ol>
     </nav>
-
   </body>
 </html>
