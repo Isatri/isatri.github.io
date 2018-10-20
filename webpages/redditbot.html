@@ -2,7 +2,6 @@
 <style>
   html, body{
     color: #36454f;
-    background-color: #ffffff;
     font-family: 'Open Sans',Calibri;
     line-height: 1.5;
   }
@@ -10,17 +9,17 @@
     color:black;
     margin:10px;
     text-align: center;
-    font-size:1.8em;
+    font-size:1.7em;
   }
   section article{
     color: #36454f;
     margin:15px;
-    font-size:0.95em;
+    font-size:0.93em;
   }
   code{
     display: block;
     line-height: 2;
-    background-color: lightgray;
+    background-color: rgba(119,136,153,0.1);
     padding:15px;
     margin:10px;
     border-radius:3px;
@@ -30,12 +29,12 @@
   #navbar{
     position:fixed;
     display: block;
-    background-color: rgb(158, 185, 212);
-    width:290px;
+    background-color: rgba(119,136,153,0.7);
+    width:270px;
     top:10px;
     bottom:10px;
     left: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
   }
   #navbar ol {
     display: block;
@@ -49,9 +48,9 @@
   #main-doc header{
     text-align:left;
     margin:0px;
-    background-color: lightblue;
+    background-color: rgba(119,136,153,0.3);
     border-radius: 10px;
-    padding-left: 5px;
+    padding-left: 6px;
   }
   #navbar a{
     color: black;
@@ -59,65 +58,41 @@
   } 
   #main-doc{
     position: absolute;
-    margin-left:310px;
+    margin-left:280px;
     padding:20px;
     margin-bottom:50px;
   }
-  @media (max-width: 500px) {
+  @media (max-width: 800px) {
     #navbar{
-      background-color: lightgray;
       position: absolute;
       top:0;
       left:0;
       right:0px;
       margin: 10px;
       width: auto;
-      max-height:320px;
+      max-height:200px;
     }
     #navbar ol {
-    display: block;
-    position: absolute;
-    top:60px;
-    bottom:10px;
-    left: 10px;
-    width: 80%;
-    list-style: none;
-    overflow-y: auto;
-    }
-    #main-doc{
-      position: relative;
-      margin-left:0px;
-      margin-top:320px;
-    }
-    }
-  @media only screen and (max-width: 300px) {
-    #navbar{
-      background-color: lightgray;
+      display: block;
       position: absolute;
-      top:0;
-      left:0;
-      right:0px;
-      margin: 10px;
-      width: auto;
-      max-height:320px;
-    }
-    #navbar ol {
-    display: block;
-    position: absolute;
-    top:60px;
-    bottom:10px;
-    left: 10px;
-    width: 80%;
-    list-style: none;
-    overflow-y: auto;
+      top:60px;
+      bottom:10px;
+      left: 10px;
+      width: 80%;
+      list-style: none;
+      overflow-y: auto;
     }
     #main-doc{
       position: relative;
       margin-left:0px;
-      margin-top:320px;
+      margin-top:200px;
+    }
+    code{
+      display: block;
+      overflow-x: auto;
     }
     }
-  }
+  
 </style>
 
 <html>
@@ -142,10 +117,10 @@
         <article>
           <p>The first thing you'll want to do is install some sort of Python IDE (or whatever you want to use to work with Python), VirutalBox, and Vagrant. There's plenty of guides and documentation for each, so we'll skip that here.</p>
           <ul>
-            <a href="https://www.anaconda.com/download/#macos"><li>Anaconda</li></a>
-            <a href="https://www.virtualbox.org/"><li>VirtualBox</li></a>
-            <a href="https://www.vagrantup.com/"><li>Vagrant</li></a>
-            <a href="https://www.vagrantup.com/intro/getting-started/index.html"><li>Vagrant: Getting Started</li></a>
+            <li><a href="https://www.anaconda.com/download/#macos">Anaconda</a></li>
+            <li><a href="https://www.virtualbox.org/">VirtualBox</a></li>
+            <li><a href="https://www.vagrantup.com/">Vagrant</a></li>
+            <li><a href="https://www.vagrantup.com/intro/getting-started/index.html">Vagrant: Getting Started</a></li>
           </ul>
         </article>
       </section>
@@ -228,16 +203,16 @@ user_agent=</code>
     <nav id="navbar">
       <header>Build-a-Bot (Reddit)</header>
       <ol>
-        <a href=#Introduction class="nav-link"><li>Introduction</li></a>
-        <a href=#Things_You_Need_to_Know class="nav-link"><li>Things You Need to Know</li></a>
-        <a href=#Getting_Set_Up class="nav-link"><li>Getting Set Up</li></a>
-        <a href=#Creating_A_Linux_Environment class="nav-link"><li>Creating A Linux Environment</li></a>
-        <a href=#Reddit_Account class="nav-link"><li>Reddit Account</li></a>
-        <a href=#Python_Script class="nav-link"><li>Python Script</li></a>
-        <a href=#Crontab class="nav-link"><li>Crontab</li></a>
-        <a href=#References class="nav-link"><li>References</li></a>
+        <li><a href=#Introduction class="nav-link">Introduction</a></li>
+        <li><a href=#Things_You_Need_to_Know class="nav-link">Things You Need to Know</a></li>
+        <li><a href=#Getting_Set_Up class="nav-link">Getting Set Up</a></li>
+        <li><a href=#Creating_A_Linux_Environment class="nav-link">Creating A Linux Environment</a></li>
+        <li><a href=#Reddit_Account class="nav-link">Reddit Account</a></li>
+        <li><a href=#Python_Script class="nav-link">Python Script</a></li>
+        <li><a href=#Crontab class="nav-link">Crontab</a></li>
+        <li><a href=#References class="nav-link">References</a></li>
         <li><br /></li>
-        <a href="../"><li>Return to front page...</li></a>
+        <li><a href="../">Return to front page...</a></li>
       </ol>
     </nav>
   </body>
